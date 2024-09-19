@@ -1,0 +1,11 @@
+@layer spacing {
+    :root {
+        --spacing-xs: clamp(0.25rem, 0.0327rem + 0.6045vw, 1rem);
+        --spacing-s: clamp(0.5rem, 0.2103rem + 0.806vw, 1.5rem);
+        --spacing-m: clamp(0.75rem, 0.3879rem + 1.0076vw, 2rem);
+        --spacing-l: clamp(1rem, 0.5655rem + 1.2091vw, 2.5rem);
+        --spacing-xl: clamp(1.25rem, 0.7431rem + 1.4106vw, 3rem);
+        --spacing-2-xl: clamp(1.5rem, 0.9207rem + 1.6121vw, 3.5rem);
+        --spacing-3-xl: clamp(2rem, 1.4207rem + 1.6121vw, 4rem);
+    }
+}

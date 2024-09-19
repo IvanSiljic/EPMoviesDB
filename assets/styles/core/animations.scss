@@ -1,0 +1,33 @@
+@layer animations {
+    :root {
+        --animation-duration-short: 0.2s;
+        --animation-duration-long: 0.5s;
+    }
+
+    // Apply transition on theme change
+    * {
+        transition-duration: var(--animation-duration-long);
+        transition-property: background-color, border-color;
+    }
+
+    *::before, *::after {
+        transition-duration: var(--animation-duration-long);
+        transition-property: background-color, border-color;
+    }
+
+    // Slide up animation
+    @keyframes slide-up {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .slide-up {
+        animation: slide-up var(--animation-duration-long) ease-out forwards;
+    }
+}

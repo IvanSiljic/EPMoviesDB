@@ -1,0 +1,16 @@
+@layer reser {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        background-color: var(--color-bg-dark);
+        color: var(--color-text);
+    }
+
+    ul {
+        list-style: none;
+
+    }
+}

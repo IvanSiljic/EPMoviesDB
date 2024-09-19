@@ -1,0 +1,51 @@
+@import "../mixins/media";
+
+@layer el-header {
+  :root {
+
+  }
+
+  .el-header {
+    height: max-content;
+  }
+
+  .el-page-header {
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: var(--spacing-s);
+    }
+
+    &__left {
+      display: none;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+      font-size: var(--font-size-xl);
+      align-items: center;
+      
+      @include viewport-m {
+        display: flex;
+      }
+    }
+
+    &__back {
+      padding-right: var(--spacing-s);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__content {
+      font-size: var(--font-size-2-xl);
+    }
+
+    &__extra {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: 40rem;
+    }
+  }
+}

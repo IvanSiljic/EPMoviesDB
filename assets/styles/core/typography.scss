@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@layer typography {
+    :root {
+        --font-weight-thin: 300;
+        --font-weight-light: 400;
+        --font-weight-regular: 500;
+        --font-weight-medium: 600;
+        --font-weight-bold: 800;
+        --font-weight-bolder: 900;
+
+        --font-size-xs: clamp(0.5rem, 0.4276rem + 0.2015vw, 0.75rem);
+        --font-size-s: clamp(0.75rem, 0.6776rem + 0.2015vw, 1rem);
+        --font-size-m: clamp(1rem, 0.9276rem + 0.2015vw, 1.25rem);
+        --font-size-l: clamp(1.25rem, 1.1776rem + 0.2015vw, 1.5rem);
+        --font-size-xl: clamp(1.5rem, 1.4276rem + 0.2015vw, 1.75rem);
+        --font-size-2-xl: clamp(1.75rem, 1.6776rem + 0.2015vw, 2rem);
+        --font-size-3-xl: clamp(2rem, 1.9276rem + 0.2015vw, 2.25rem);
+        --font-size-4-xl: clamp(2.5rem, 2.4276rem + 0.2015vw, 2.75rem);
+        --font-size-5-xl: clamp(3rem, 2.9276rem + 0.2015vw, 3.25rem);
+        --font-size-6-xl: clamp(4rem, 3.8552rem + 0.403vw, 4.5rem);
+    }
+
+    html, body {
+        font-family: 'Roboto', monospace;
+    }
+}

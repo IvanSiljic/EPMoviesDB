@@ -2,38 +2,31 @@
 import Home from '~/assets/icons/svg/home.svg'
 import Movie from '~/assets/icons/svg/movie.svg'
 import Tv from '~/assets/icons/svg/tv.svg'
-import Search from '~/assets/icons/svg/search.svg'
 
+// CONSTANTS
+const { t } = useI18n()
 </script>
 
 <template>
-    <ElAside width="150px">
+    <ElAside>
         <ElMenu
             class="el-menu-vertical-demo"
             router
         >
-            <ElMenuItem index="1">
-                <NuxtLink to="/" aria-label="Home">
-                    <Home/>
-                </NuxtLink>
+            <ElMenuItem index="/" class="slide-up" :aria-label="t('aside.home')">
+                <ElIcon><Home/></ElIcon>
             </ElMenuItem>
 
-            <ElMenuItem index="2">
-                <NuxtLink to="/movies" aria-label="Home">
-                    <Movie/>
-                </NuxtLink>
+            <ElMenuItem index="/movies" class="slide-up" :aria-label="t('aside.movies')">
+                <ElIcon><Movie/></ElIcon>
             </ElMenuItem>
 
-            <ElMenuItem index="3">
-                <NuxtLink to="/tv" aria-label="Home">
-                    <Tv/>
-                </NuxtLink>
+            <ElMenuItem index="/tv" class="slide-up" :aria-label="t('aside.tv')">
+                <ElIcon><Tv/></ElIcon>
             </ElMenuItem>
 
-            <ElMenuItem index="3">
-                <NuxtLink aria-label="Home">
-                    <Search/>
-                </NuxtLink>
+            <ElMenuItem :aria-label="t('aside.themeSwitch')">
+                <ToggleTheme/>
             </ElMenuItem>
         </ElMenu>
     </ElAside>
@@ -42,11 +35,5 @@ import Search from '~/assets/icons/svg/search.svg'
 <style scoped>
 .el-menu-vertical-demo {
     border-right: none;
-}
-
-.search-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
 }
 </style>
