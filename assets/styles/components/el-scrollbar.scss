@@ -1,0 +1,51 @@
+@layer el-scrollbar {
+    :root {
+        --scrollbar-color-bg: var(--color-text-light);
+        --scrollbar-color-bg-hover: var(--color-text);
+
+        --scrollbar-width: 12px;
+        --scrollbar-height: 12px;
+    }
+
+    .el-scrollbar {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        &__wrap {
+            overflow: auto;
+            height: 100%;
+
+            /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+                scrollbar-width: var(--scrollbar-width);
+                scrollbar-color: var(--scrollbar-color-bg-hover) var(--scrollbar-color-bg);
+            }
+
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+                width: var(--scrollbar-width);
+                height: var(--scrollbar-height);
+            }
+
+            *::-webkit-scrollbar-track {
+                background: var(--scrollbar-color-bg);
+            }
+
+            *::-webkit-scrollbar-thumb {
+                background-color: var(--scrollbar-color-bg-hover);
+                border-radius: var(--scrollbar-width);
+                border: 2px solid var(--scrollbar-color-bg-hover);
+            }
+        }
+
+        &__thumb {
+            display: none;
+        }
+
+        &__bar {
+            display: none;
+        }
+    }
+}

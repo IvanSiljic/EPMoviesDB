@@ -1,14 +1,12 @@
-html,
-body,
-#app {
-    margin: 0;
-    padding: 0;
-}
+@use './core/animations';
+@use './core/colors';
+@use './core/grid';
+@use './core/reset';
+@use './core/spacing';
+@use './core/typography';
 
-html.dark {
-}
-
-a {
-    font-weight: 400;
-    color: var(--el-color-primary);
-}
+@use './components/el-aside';
+@use './components/el-button';
+@use './components/el-header';
+@use './components/el-input';
+@use './components/el-scrollbar';

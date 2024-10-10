@@ -1,0 +1,17 @@
+@import "../mixins/media";
+
+@layer grid {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-m);
+
+        @include viewport-s {
+            grid-template-columns: repeat(8, 1fr);
+        }
+
+        @include viewport-m {
+            grid-template-columns: repeat(16, 1fr);
+        }
+    }
+}

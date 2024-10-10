@@ -1,0 +1,51 @@
+@import "../mixins/media";
+
+@layer el-aside {
+    :root {
+        --aside-color-bg: var(--color-bg-dark);
+        --aside-color-text: var(--color-text);
+        --aside-color-active: var(--color-primary);
+        --aside-color-border: var(--color-bg-light);
+
+        --aside-font-size: var(--font-size-l);
+
+        --aside-padding: var(--spacing-s);
+    }
+
+    .el-aside {
+        background-color: var(--aside-color-bg);
+        color: var(--aside-color-text);
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+                font-size: var(--aside-font-size);
+                padding: var(--aside-padding);
+                cursor: pointer;
+            }
+        }
+
+        @include viewport-m {
+            --aside-font-size: var(--font-size-2-xl);
+            --aside-padding: var(--spacing-l);
+            height: 100vh;
+            width: 100%;
+            border-right: 2px solid var(--aside-color-border);
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 50%;
+            }
+        }
+    }
+
+    .is-active {
+        color: var(--aside-color-active);
+    }
+}

@@ -1,0 +1,95 @@
+@layer el-input {
+    :root {
+        --input-color-text: var(--color-text);
+        --input-color-bg: var(--color-bg-light);
+        --input-color-bg-focus: var(--color-bg-dark);
+        --input-color-text-light: var(--color-text-light);
+        --input-color-active: var(--color-primary);
+
+        --input-font-size: var(--font-size-l);
+        --suffix-icon-width: var(--spacing-l);
+    }
+
+    .el-input {
+        position: relative;
+        font-size: var(--input-font-size);
+        display: inline-flex;
+        width: 100%;
+        box-sizing: border-box;
+        vertical-align: middle;
+        border-radius: var(--spacing-xl);
+
+        &__clear {
+            color: var(--input-color-text-light);
+            font-size: var(--input-font-size);
+            cursor: pointer;
+
+            & :hover {
+                color: var(--input-color-text);
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: var(--input-color-bg);
+            border-radius: var(--spacing-xl);
+            padding: var(--spacing-xs);
+            padding-inline: var(--spacing-s);
+            cursor: text;
+
+            &.is-focus {
+                box-shadow: 0 0 0 1px var(--input-color-active) inset;
+                background-color: var(--input-color-bg-focus);
+            }
+        }
+
+        &__inner {
+            color: var(--input-color-text);
+            margin-inline: var(--spacing-xl);
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: var(--input-font-size);
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: var(--input-color-text-light);
+            }
+        }
+
+        &__suffix,
+        &__prefix {
+            position: absolute;
+
+            &-inner {
+                pointer-events: all
+            }
+        }
+
+        &__prefix {
+            left: var(--spacing-xs);
+        }
+
+        &__suffix {
+            border: none;
+            right: var(--spacing-xs);
+            transition: 0s;
+        }
+
+        &__icon {
+            height: inherit;
+            line-height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all var(--animation-duration-short);
+            margin-left: var(--spacing-xs);
+            width: var(--font-size-l);
+        }
+    }
+}
