@@ -1,5 +1,6 @@
 @layer spacing {
     :root {
+        --border-radius-base: 0px;
         --spacing-xs: clamp(0.25rem, 0.0327rem + 0.6045vw, 1rem);
         --spacing-s: clamp(0.5rem, 0.2103rem + 0.806vw, 1.5rem);
         --spacing-m: clamp(0.75rem, 0.3879rem + 1.0076vw, 2rem);

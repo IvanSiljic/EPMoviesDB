@@ -1,0 +1,52 @@
+@layer el-image {
+    :root {
+        --image-fill-color: var(--color-bg-light);
+        --image-text-color: var(--color-text);
+    }
+
+    .el-image {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+
+        &__inner {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+            opacity: 1;
+
+            &--loading {
+                opacity: 0;
+            }
+        }
+
+        &__wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &__placeholder {
+            width: 100%;
+            height: 100%;
+            background: var(--image-fill-color);
+        }
+
+        &__error {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            background: var(--image-fill-color);
+            color: var(--image-text-color);
+        }
+
+        &__preview {
+            cursor: pointer;
+        }
+    }
+}

@@ -6,7 +6,6 @@ $viewport-l: 1440px;
 $viewport-xl: 1920px;
 $viewport-xxl: 2560px;
 
-
 @mixin viewport-xs {
     @media (min-width: $viewport-xs) {
         @content;
@@ -48,4 +47,3 @@ $viewport-xxl: 2560px;
         @content;
     }
 }
-

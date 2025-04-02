@@ -1,0 +1,77 @@
+@layer el-skeleton-item {
+    :root {
+        --skeleton-border-radius: var(--border-radius-base);
+        --skeleton-circle-size: var(--spacing-xl);
+    }
+
+    .el-skeleton {
+        &__item {
+            display: inline-block;
+            height: 16px;
+            border-radius: var(--skeleton-border-radius);
+            width: 100%;
+        }
+
+        &__circle {
+            border-radius: 50%;
+            width: var(--skeleton-circle-size);
+            height: var(--skeleton-circle-size);
+            line-height: var(--skeleton-circle-size);
+        }
+
+        &__button {
+            height: 40px;
+            width: 64px;
+            border-radius: var(--skeleton-border-radius);
+        }
+
+        &__p {
+            width: 100%;
+
+            &--last {
+                width: 61%;
+            }
+
+            &--first {
+                width: 33%;
+            }
+        }
+
+        &__text {
+            width: 100%;
+            height: var(--font-size-s);
+        }
+
+        &__caption {
+            height: var(--font-size-xs);
+        }
+
+        &__h1 {
+            height: var(--font-size-xl);
+        }
+
+        &__h3 {
+            height: var(--font-size-l);
+        }
+
+        &__h5 {
+            height: var(--font-size-m);
+        }
+
+        &__image {
+            width: unset;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+
+            svg {
+                color: var(--color-text-light);
+                fill: currentColor;
+                width: 22%;
+                height: 22%;
+            }
+        }
+    }
+}

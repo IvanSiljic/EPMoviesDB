@@ -1,17 +1,15 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
     <ElContainer class="grid wrapper">
-        <Aside class="aside"/>
+        <Aside class="aside" />
         <ElContainer class="grid container">
-            <Header class="header"/>
+            <Header class="header" />
             <ElScrollbar class="page">
                 <ElMain class="main">
-                    <slot/>
+                    <slot />
                 </ElMain>
-                <ElFooter class="footer">Footer</ElFooter>
+                <Footer class="footer" />
             </ElScrollbar>
         </ElContainer>
     </ElContainer>
@@ -27,6 +25,7 @@
         align-self: end;
         grid-column: 1/-1;
         grid-row: 2;
+        z-index: 10;
     }
 
     & .container {
@@ -47,7 +46,7 @@
             gap: 0;
 
             & .main {
-                min-height: 100vh;
+                min-height: 75vh;
             }
 
             & .footer {

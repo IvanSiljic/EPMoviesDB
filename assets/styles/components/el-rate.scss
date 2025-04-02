@@ -1,0 +1,58 @@
+@layer el-rate {
+    :root {
+        --rate-height: 32px;
+        --rate-size-small: 14px;
+        --rate-icon-size: 1rem;
+        --rate-icon-margin: var(--spacing-2-xs);
+
+        --rate-fill-color: var(--color-primary);
+    }
+
+    .el-rate {
+        display: inline-flex;
+        align-items: center;
+        height: var(--rate-height);
+
+        &__item {
+            display: inline-block;
+            position: relative;
+            font-size: 0;
+            vertical-align: middle;
+            color: var(--rate-void-color);
+            line-height: normal;
+        }
+
+        &__icon {
+            position: relative;
+            display: inline-block;
+            font-size: var(--rate-icon-size);
+            margin-right: var(--rate-icon-margin);
+            transition: var(--animation-duration-short);
+
+            .path2 {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &.is-active {
+                color: var(--rate-fill-color);
+            }
+        }
+
+        &__decimal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            overflow: hidden;
+            color: var(--rate-fill-color);
+
+            &--box {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

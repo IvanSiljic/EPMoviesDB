@@ -1,4 +1,4 @@
-@import "../mixins/media";
+@use '../mixins' as mixins;
 
 @layer el-aside {
     :root {
@@ -28,7 +28,7 @@
             }
         }
 
-        @include viewport-m {
+        @include mixins.viewport-m {
             --aside-font-size: var(--font-size-2-xl);
             --aside-padding: var(--spacing-l);
             height: 100vh;

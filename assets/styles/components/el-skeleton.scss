@@ -1,0 +1,43 @@
+@layer el-skeleton {
+    :root {
+        --skeleton-color: var(--color-bg-light);
+        --skeleton-to-color: var(--color-text-light);
+        --skeleton-animation-duration: 1.4s;
+        --skeleton-height: var(--font-size-l);
+        --skeleton-margin-top: 0;
+    }
+
+    .el-skeleton {
+        width: 100%;
+
+        &__item,
+        &__first-line,
+        &__paragraph {
+            height: var(--skeleton-height);
+            margin-top: var(--skeleton-margin-top);
+            background: var(--skeleton-color);
+        }
+
+        &.is-animated &__item {
+            background: linear-gradient(
+                120deg,
+                var(--skeleton-color) 0%,
+                var(--skeleton-color) 30%,
+                var(--skeleton-to-color) 50%,
+                var(--skeleton-color) 70%,
+                var(--skeleton-color) 100%
+            );
+            background-size: 400% 100%;
+            animation: skeleton-loading var(--skeleton-animation-duration) ease infinite;
+        }
+    }
+
+    @keyframes skeleton-loading {
+        0% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}

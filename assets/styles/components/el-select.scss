@@ -1,0 +1,125 @@
+@layer el-select {
+    :root {
+        --select-width: 7rem;
+        --select-border-radius: var(--border-radius-base);
+
+        --select-bg-color: var(--color-bg-dark);
+        --select-border-color: var(--color-bg-dark);
+        --select-border-color-hover: var(--color-bg-dark);
+        --select-border-color-focus: var(--color-bg-dark);
+
+        --select-disabled-bg: var(--color-bg-light);
+        --select-disabled-border: var(--color-bg-light);
+        --select-disabled-color: var(--color-bg-light);
+
+        --select-placeholder-color: var(--color-text-light);
+        --select-font-size: var(--font-size-m);
+        --select-padding: var(--spacing-xs);
+        --select-item-gap: var(--spacing-xs);
+        --select-min-height: var(--spacing-l);
+        --select-transition: var(--animation-duration-long);
+    }
+
+    .el-select {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        width: var(--select-width);
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            box-sizing: border-box;
+            cursor: pointer;
+            text-align: left;
+            font-size: var(--select-font-size);
+            padding: var(--select-padding);
+            gap: var(--select-item-gap);
+            min-height: var(--select-min-height);
+            border-radius: var(--select-border-radius);
+            background-color: var(--select-bg-color);
+            box-shadow: inset 0 0 0 1px var(--select-border-color);
+            transition: var(--select-transition);
+            transform: translate3d(0, 0, 0);
+
+            &:hover {
+                box-shadow: inset 0 0 0 1px var(--select-border-color-hover);
+            }
+
+            &.is-focused {
+                box-shadow: inset 0 0 0 1px var(--select-border-color-focus);
+            }
+
+            &.is-disabled {
+                cursor: not-allowed;
+                pointer-events: none;
+                background-color: var(--select-disabled-bg);
+                color: var(--select-disabled-color);
+                box-shadow: inset 0 0 0 1px var(--select-disabled-border);
+
+                &:hover {
+                    box-shadow: inset 0 0 0 1px var(--select-disabled-border);
+                }
+            }
+        }
+
+        &__selection {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex: 1;
+            min-width: 0;
+            gap: var(--select-item-gap);
+        }
+
+        &__placeholder {
+            position: absolute;
+            z-index: -1;
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            color: var(--select-placeholder-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__caret {
+            font-size: var(--font-size-l);
+            transition: var(--select-transition);
+            transform: rotate(0deg);
+            cursor: pointer;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--select-font-size);
+
+            &svg {
+                color: var(--color-text);
+            }
+
+            &.is-reverse {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__input {
+            display: none;
+        }
+
+        &--large {
+            --select-font-size: var(--font-size-l);
+            --select-padding: var(--spacing-m);
+            --select-min-height: var(--spacing-2xl);
+        }
+
+        &--small {
+            --select-font-size: var(--font-size-s);
+            --select-padding: var(--spacing-xs);
+            --select-min-height: var(--spacing-l);
+        }
+    }
+}

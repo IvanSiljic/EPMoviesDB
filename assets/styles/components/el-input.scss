@@ -7,7 +7,8 @@
         --input-color-active: var(--color-primary);
 
         --input-font-size: var(--font-size-l);
-        --suffix-icon-width: var(--spacing-l);
+        --input-suffix-icon-width: var(--spacing-l);
+        --input-border-radius: var(--border-radius-base);
     }
 
     .el-input {
@@ -17,7 +18,7 @@
         width: 100%;
         box-sizing: border-box;
         vertical-align: middle;
-        border-radius: var(--spacing-xl);
+        border-radius: var(--input-border-radius);
 
         &__clear {
             color: var(--input-color-text-light);
@@ -34,7 +35,7 @@
             align-items: center;
             width: 100%;
             background-color: var(--input-color-bg);
-            border-radius: var(--spacing-xl);
+            border-radius: var(--input-border-radius);
             padding: var(--spacing-xs);
             padding-inline: var(--spacing-s);
             cursor: text;
@@ -67,7 +68,7 @@
             position: absolute;
 
             &-inner {
-                pointer-events: all
+                pointer-events: all;
             }
         }
 

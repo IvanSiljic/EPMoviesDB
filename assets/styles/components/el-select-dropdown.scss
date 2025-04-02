@@ -1,0 +1,76 @@
+@layer el-select-dropdown {
+    :root {
+        --select-border-radius: var(--border-radius-base);
+        --select-dropdown-padding: var(--spacing-s);
+        --select-font-size: var(--font-size-m);
+        --select-dropdown-max-height: 10rem;
+        --select-dropdown-border: 0 0 1px 0 solid var(--color-text-light);
+    }
+
+    .el-select-dropdown {
+        z-index: 2001;
+        border-radius: var(--select-border-radius);
+        box-sizing: border-box;
+        color: var(--color-text-light);
+
+        .el-scrollbar.is-empty .el-select-dropdown__list {
+            padding: 0;
+        }
+
+        &__loading {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            color: var(--color-bg-light);
+            font-size: var(--select-font-size);
+        }
+
+        &__empty {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            color: var(--color-bg-light);
+            font-size: var(--select-font-size);
+        }
+
+        &__wrap {
+            max-height: var(--select-dropdown-max-height);
+        }
+
+        &__list {
+            list-style: none;
+            padding: var(--select-dropdown-padding);
+            margin: 0;
+            box-sizing: border-box;
+
+            &.el-vl__window {
+                // for select-v2
+                margin: var(--select-dropdown-padding);
+                padding: 0;
+            }
+        }
+
+        &__item {
+            cursor: pointer;
+            transition: all var(--animation-duration-long) ease-in-out;
+
+            &:hover {
+                color: var(--color-text);
+            }
+
+            &.is-selected {
+                color: var(--color-text);
+            }
+        }
+
+        &__header {
+            padding: var(--select-dropdown-padding);
+            border-bottom: var(--select-dropdown-border);
+        }
+
+        &__footer {
+            padding: var(--select-dropdown-padding);
+            border-top: var(--select-dropdown-border);
+        }
+    }
+}

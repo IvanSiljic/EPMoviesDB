@@ -1,0 +1,31 @@
+@layer el-popper {
+    :root {
+        --popper-bg-color: var(--color-bg-dark);
+        --popper-border-radius: var(--border-radius-base);
+        --popper-padding-top: var(--spacing-xs);
+        --popper-padding-side: 0;
+        --popper-font-size: var(--font-size-m);
+        --popper-line-height: var(--font-size-l);
+    }
+
+    .el-popper {
+        position: absolute;
+        border-radius: var(--popper-border-radius);
+        padding: var(--popper-padding-top) var(--popper-padding-side);
+        z-index: 2000;
+        font-size: var(--popper-font-size);
+        line-height: var(--popper-line-height);
+        min-width: 10px;
+        overflow-wrap: break-word;
+        visibility: visible;
+        background-color: var(--popper-bg-color);
+
+        &.is-pure {
+            padding: 0;
+        }
+
+        &__arrow {
+            display: none;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-@import "../mixins/media";
+@use '../mixins' as mixins;
 
 @layer grid {
     .grid {
@@ -6,11 +6,11 @@
         grid-template-columns: repeat(4, 1fr);
         gap: var(--spacing-m);
 
-        @include viewport-s {
+        @include mixins.viewport-s {
             grid-template-columns: repeat(8, 1fr);
         }
 
-        @include viewport-m {
+        @include mixins.viewport-m {
             grid-template-columns: repeat(16, 1fr);
         }
     }

@@ -3,7 +3,7 @@
         --button-font-weight: var(--font-weight-medium);
         --button-font-size: var(--font-size-m);
         --button-padding: var(--spacing-s);
-        --button-border-radius: var(--spacing-l);
+        --button-border-radius: var(--border-radius-base);
 
         --button-bg-color: var(--color-text);
         --button-text-color: var(--color-bg-light);
@@ -41,7 +41,8 @@
         border: none;
         border-radius: var(--button-border-radius);
 
-        &:hover span, &:hover i {
+        &:hover span,
+        &:hover i {
             transform: scale(1.05);
             outline: none;
         }
@@ -53,7 +54,9 @@
         &:focus-visible {
             outline: 2px solid var(--button-outline-color);
             outline-offset: 1px;
-            transition: outline-offset 0s, outline 0s;
+            transition:
+                outline-offset 0s,
+                outline 0s;
         }
 
         & span {

@@ -1,0 +1,41 @@
+@layer el-footer {
+    :root {
+        --footer-color-bg: var(--color-bg-light);
+        --footer-color-text: var(--color-text-light);
+        --footer-color-text-hover: var(--color-text);
+
+        --footer-font-size: var(--font-size-s);
+        --footer-font-size-icon: var(--font-size-m);
+
+        --footer-padding: var(--spacing-l);
+        --paragraph-margin: var(--spacing-m);
+    }
+
+    .el-footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--footer-color-bg);
+        color: var(--footer-color-text);
+        padding: var(--footer-padding);
+
+        p {
+            margin: var(--paragraph-margin) 0;
+            font-size: var(--footer-font-size);
+        }
+
+        a {
+            color: var(--footer-color-text);
+            text-decoration: underline;
+            transition: all var(--animation-duration-short) ease-in-out;
+
+            i {
+                font-size: var(--footer-font-size-icon);
+            }
+
+            &:hover,
+            &:focus {
+                color: var(--footer-color-text-hover);
+            }
+        }
+    }
+}
